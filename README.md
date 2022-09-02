@@ -25,6 +25,16 @@ docker-compose up
 docker-compose down
 ```
 
+### Showing all container
+```
+docker ps
+```
+
+### Connecting into a running container
+```
+docker exec -it <containerId> bash
+```
+
 ## How to make it works on WSL
 - On Windows, you must install Docker Desktop, Rancher Desktop or other similar software.
 - Then you need to expose the kubernetes configurations and docker socket on WSL in the software "Preferences".
