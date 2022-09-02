@@ -26,9 +26,5 @@ docker-compose down
 ```
 
 ## How to make it works on WSL
-PUT THE TEXT HERE
-- Install on Windows Docker Desktop, Rancher Desktop or other similar software.
-- Then, do this on WSL: https://nickjanetakis.com/blog/setting-up-docker-for-windows-and-wsl-to-work-flawlessly#configure-docker-for-windows
-```
-echo "export DOCKER_HOST=tcp://localhost:2375" >> ~/.bashrc && source ~/.bashrc
-```
+- On Windows, you must install Docker Desktop, Rancher Desktop or other similar software.
+- Then you need to expose the kubernetes configurations and docker socket on WSL in the software "Preferences".
