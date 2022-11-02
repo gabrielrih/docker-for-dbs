@@ -2,10 +2,7 @@
 version: "3"
 services:
   db:
-    image: postgres:14.5
-#    build:
-#      context: .
-#      dockerfile: Dockerfile
+    image: postgres:15
     ports:
       - "5432:5432"
     volumes:
@@ -13,6 +10,6 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: postgres
+      POSTGRES_DB: test
 volumes:
   pg-data:

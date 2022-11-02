@@ -1,6 +1,10 @@
 # Testing
 Once you have the container running, you can test the connect using this command:
 ```
+psql -h localhost -p 5432 -U postgres
+```
+From connection inside the container you can use just:
+```
 psql -U postgres
 ```
 
