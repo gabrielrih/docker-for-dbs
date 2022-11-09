@@ -12,44 +12,6 @@ sudo apt install docker.io
 sudo apt install docker-compose
 ```
 
-## 1. Using Docker Compose
-This method will use the **docker-compose.yml** file to create the container.
-
-### Putting UP a container
-```
-cd postgresql
-docker-compose up -d
-```
-
-### Putting DOWN a container
-```
-docker-compose down
-```
-
-## 2. Using Dockerfile
-This method will use the **Dockerfile** file to create the container.
-
-### Creating the image on your local repository
-```
-cd postgresql
-docker build -t my-pg-db-image-name .
-```
-Review if the image was created:
-```
-docker images -a
-```
-
-### Putting UP a container
-```
-docker run -d --name my-pg-db-container-name -p 5432:5432 my-pg-db-image-name
-```
-
-### Putting DOWN a container
-```
-docker stop <containerId>
-docker rm <containerId>
-```
-
 ## Usefull commands
 Showing all container:
 ```
@@ -63,7 +25,14 @@ Connecting into a running container:
 ```
 docker exec -it <containerId> bash
 ```
+See the exposed ports to a container:
+```
+docker port <containerName>
+```
 
 ## How to make it works on WSL
 - On Windows, you must install Docker Desktop, Rancher Desktop or other similar software.
 - Then you need to expose the kubernetes configurations and docker socket on WSL in the software "Preferences".
+
+## Some reference:
+- Expose ports: https://www.baeldung.com/ops/docker-expose-more-than-one-portddd
