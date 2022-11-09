@@ -24,3 +24,6 @@ docker rm <containerId>
 ### Exposed ports
 - 5672: Rabbit main service
 - 15672: Management plugin/Web Site (http://localhost:15672/#/)
+
+### References:
+- https://hub.docker.com/_/rabbitmq
